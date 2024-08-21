@@ -6,22 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subhi Suhad Ibrahim - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #fbc2eb, #a6c0fe);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .experience-item,
+        .project-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards;
+        }
+        
+        .experience-item h3,
+        .project-item h3 {
+            margin-top: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="text-gray-900">
 
     <header class="bg-blue-800 text-white p-6">
         <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">Subhi Suhad Ibrahim</h1>
-            <p class="mt-2">Senior PHP Developer</p>
-            <p>Amman, Jordan | subhisuhad@gmail.com | +962 787155304</p>
-            <p><a href="https://www.linkedin.com/in/subhi-suhad-4621aa97/" class="underline">LinkedIn Profile</a></p>
+            <h1 class="text-3xl font-bold animate__animated animate__fadeIn">Subhi Suhad Ibrahim</h1>
+            <p class="mt-2 animate__animated animate__fadeIn">Senior PHP Developer</p>
+            <p class="animate__animated animate__fadeIn">Amman, Jordan | subhisuhad@gmail.com | +962 787155304</p>
+            <p class="animate__animated animate__fadeIn"><a href="https://www.linkedin.com/in/subhi-suhad-4621aa97/" class="underline">LinkedIn Profile</a></p>
         </div>
     </header>
 
     <main class="container mx-auto p-6 space-y-8">
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Personal Data</h2>
             <ul class="list-disc list-inside">
                 <li><strong>Name:</strong> Subhi Suhad Ibrahim</li>
@@ -34,12 +71,12 @@
             </ul>
         </section>
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Education</h2>
             <p><strong>BSc of Computer Science (Computer Science)</strong>, Princess Sumaya University for Technology (2010-2014)</p>
         </section>
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Languages</h2>
             <ul class="list-disc list-inside">
                 <li><strong>Arabic:</strong> Mother tongue</li>
@@ -47,7 +84,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Computer Skills</h2>
             <ul class="list-disc list-inside">
                 <li>Microsoft Office (Word, Excel, PowerPoint)</li>
@@ -66,10 +103,10 @@
             </ul>
         </section>
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Experience Acquired</h2>
             <div class="space-y-4">
-                <div>
+                <div class="experience-item animate__animated animate__fadeInUp">
                     <h3 class="text-xl font-semibold">Knowledge Beam (05/2021 - Present)</h3>
                     <p><strong>Job title:</strong> Senior PHP Developer, Amman, Jordan</p>
                     <ul class="list-disc list-inside">
@@ -82,7 +119,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="experience-item animate__animated animate__fadeInUp">
                     <h3 class="text-xl font-semibold">Aspire (04/2018 - 05/2021)</h3>
                     <p><strong>Job title:</strong> Senior Software Engineer, Amman, Jordan</p>
                     <ul class="list-disc list-inside">
@@ -92,7 +129,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="experience-item animate__animated animate__fadeInUp">
                     <h3 class="text-xl font-semibold">NS4IT (02/2017 - 04/2018)</h3>
                     <p><strong>Job title:</strong> Web Developer, Amman, Jordan</p>
                     <ul class="list-disc list-inside">
@@ -103,7 +140,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="experience-item animate__animated animate__fadeInUp">
                     <h3 class="text-xl font-semibold">Financial Engineers (05/2015 - 01/2017)</h3>
                     <p><strong>Job title:</strong> System Engineer, Amman, Jordan</p>
                     <ul class="list-disc list-inside">
@@ -114,56 +151,84 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="experience-item animate__animated animate__fadeInUp">
                     <h3 class="text-xl font-semibold">Miral IT (04/2014 - 05/2015)</h3>
                     <p><strong>Job title:</strong> Web Developer, Amman, Jordan</p>
                     <ul class="list-disc list-inside">
-                        <li>Resolved system issues and developed RDLC reports and charts using ASP.NET and PHP, ensuring accurate data representation and system functionality.</li>
-                        <li>Coordinated and managed team tasks, ensuring efficient workflow and project completion.</li>
-                        <li>Regularly reported project status and progress to the line manager, providing clear and concise updates.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-semibold">Amyal Company (Part-Time)</h3>
-                    <p><strong>Job title:</strong> PHP Developer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li><strong>Car Wash:</strong> Multiservice application developed in Laravel.</li>
-                        <li><strong>Amyal Express:</strong> Logistics application developed in Laravel, allowing merchants to ship items using Amyal drivers, and includes a product section for purchases.</li>
+                        <li>Designed and developed various web applications, focusing on optimizing user experience and functionality.</li>
+                        <li>Collaborated with team members to ensure timely project completion and quality assurance.</li>
+                        <li>Assisted in the development and maintenance of internal tools and client-facing platforms.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-            <ul class="list-disc list-inside">
-                <li><strong>Teachers</strong>: Platform for teachers in Jordan Ministry of Education (Moodle). <a href="https://teachers.gov.jo/" class="text-blue-600 underline">https://teachers.gov.jo/</a></li>
-                <li><strong>Learners Lead</strong>: Platform for IBS with e-commerce features (Moodle). <a href="https://learnerslead.ibs.edu.jo/" class="text-blue-600 underline">https://learnerslead.ibs.edu.jo/</a></li>
-                <li><strong>Cluster Learning</strong>: Platform for BDC with specific enrollment criteria (Moodle). <a href="https://clusterlearning.net" class="text-blue-600 underline">https://clusterlearning.net</a></li>
-                <li><strong>Glowy by Marmalade</strong>: E-commerce website (WordPress + WooCommerce). <a href="https://glowybymarmalade.com/" class="text-blue-600 underline">https://glowybymarmalade.com/</a></li>
-                <li><strong>Army</strong>: Training platform for the Jordan Army (Moodle).</li>
-                <li><strong>Cozmo</strong>: E-commerce website (Magento 2). <a href="https://cozmo.jo/" class="text-blue-600 underline">https://cozmo.jo/</a></li>
-                <li><strong>Nasco Store</strong>: E-commerce website (WordPress + WooCommerce).</li>
-                <li><strong>Car Wash</strong>: Multiservice application for Amyal Smart Company (Laravel).</li>
-                <li><strong>Amyal Express</strong>: Logistics application for Amyal Smart Company (Laravel).</li>
-                <li><strong>FinEngin</strong>: Banking budgeting system for Financial Engineers (ASP.NET).</li>
-                <li><strong>Matjarii</strong>: E-commerce website (Magento 2).</li>
-            </ul>
-        </section>
+            <div class="space-y-4">
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Teachers</h3>
+                    <p><strong>Description:</strong> A platform for teachers in Jordan's Ministry of Education, built in Moodle.</p>
+                    <p><strong>URL:</strong> <a href="https://teachers.gov.jo/" class="text-blue-500 underline">teachers.gov.jo</a></p>
+                </div>
 
-        <section>
-            <h2 class="text-2xl font-semibold mb-4">References</h2>
-            <p>Available upon request.</p>
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Learners Lead</h3>
+                    <p><strong>Description:</strong> A platform for IBS offering courses that users can purchase, integrated with eFawateercom and Amazon Pay, with custom reports and invoicing features, built in Moodle.</p>
+                    <p><strong>URL:</strong> <a href="https://learnerslead.ibs.edu.jo/" class="text-blue-500 underline">learnerslead.ibs.edu.jo</a></p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Cluster Learning</h3>
+                    <p><strong>Description:</strong> A platform for BDC with courses that users can enroll in with specific criteria, built in Moodle.</p>
+                    <p><strong>URL:</strong> <a href="https://clusterlearning.net/" class="text-blue-500 underline">clusterlearning.net</a></p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Glowy by Marmalade</h3>
+                    <p><strong>Description:</strong> An e-commerce website developed in WordPress with WooCommerce.</p>
+                    <p><strong>URL:</strong> <a href="https://glowybymarmalade.com/" class="text-blue-500 underline">glowybymarmalade.com</a></p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Army</h3>
+                    <p><strong>Description:</strong> A training platform for the Jordan Army, built in Moodle.</p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Cozmo</h3>
+                    <p><strong>Description:</strong> An e-commerce system developed in Magento 2.</p>
+                    <p><strong>URL:</strong> <a href="https://cozmo.jo/" class="text-blue-500 underline">cozmo.jo</a></p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Nasco Store</h3>
+                    <p><strong>Description:</strong> An e-commerce website developed in WordPress with WooCommerce.</p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Matjarii</h3>
+                    <p><strong>Description:</strong> An e-commerce website developed in Magento 2.</p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Car Wash</h3>
+                    <p><strong>Description:</strong> An application for Amyal Smart Company, developed in Laravel.</p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">Amyal Express</h3>
+                    <p><strong>Description:</strong> An application for Amyal Smart Company, developed in Laravel.</p>
+                </div>
+
+                <div class="project-item animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold">FinEngin</h3>
+                    <p><strong>Description:</strong> A banking budgeting system developed for Financial Engineers in .NET.</p>
+                </div>
+            </div>
         </section>
 
     </main>
-
-    <footer class="bg-blue-800 text-white p-6 mt-auto">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Subhi Suhad Ibrahim. All rights reserved.</p>
-        </div>
-    </footer>
 
 </body>
 
