@@ -2,234 +2,264 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhi Suhad Ibrahim - Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        body {
-            background-image: linear-gradient(to right, #fbc2eb, #a6c0fe);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-        
-        .experience-item,
-        .project-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 0.6s forwards;
-        }
-        
-        .experience-item h3,
-        .project-item h3 {
-            margin-top: 0;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="./tailwind.config.js"></script>
+    <script src="./scripts.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Subhi Suhad Ibrahim Portfolio</title>
 </head>
 
-<body class="text-gray-900">
+<body class="bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white">
 
-    <header class="bg-blue-800 text-white p-6">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold animate__animated animate__fadeIn">Subhi Suhad Ibrahim</h1>
-            <p class="mt-2 animate__animated animate__fadeIn">Senior PHP Developer</p>
-            <p class="animate__animated animate__fadeIn">Amman, Jordan | subhisuhad@gmail.com | +962 787155304</p>
-            <p class="animate__animated animate__fadeIn"><a href="https://www.linkedin.com/in/subhi-suhad-4621aa97/" class="underline">LinkedIn Profile</a></p>
+    <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20">
+        <nav class="container px-5 md:mx-auto flex flex-wrap items-center justify-between gap-5">
+            <h1 class="text-4xl font-bold text-white">Subhi</h1>
+
+            <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+                <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <ul id="menu" class="hidden lg:flex w-full lg:w-auto flex-wrap items-center gap-10">
+                <li class="py-1 lg:py-0"><a href="#home" class="hover:text-primary">Home</a></li>
+                <li class="py-1 lg:py-0"><a href="#about" class="hover:text-primary">About</a></li>
+                <li class="py-1 lg:py-0"><a href="#projects" class="hover:text-primary">Projects</a></li>
+                <li class="py-1 lg:py-0"><a href="#experience" class="hover:text-primary">Experience</a></li>
+                <li class="py-1 lg:py-0"><a href="#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="home" class="container px-5 md:mx-auto flex items-center gap-10 mt-10">
+            <!-- Text Section -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                <h3 class="font-normal mb-3 text-2xl text-white">Hello,</h3>
+                <h1 class="font-bold text-5xl lg:text-8xl my-3 text-white">I'm Subhi</h1>
+                <p class="mt-5 mb-10 md:text-lg text-white">
+                    I'm a Senior PHP Developer with over 10 years of experience in crafting user-friendly software and building excellent projects.
+                </p>
+                <a href="./image/CV Subhi Suhad php developer.pdf" target="_blank" class="bg-primary shadow-md text-white px-5 py-2 rounded my-10 transition hover:bg-primary-dark">
+                    Download CV
+                </a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="hidden lg:flex lg:w-1/3 items-center justify-end">
+                <img src="./image/Subhi.jpeg" alt="Subhi's avatar" class="object-cover h-[30rem] w-auto transition-transform duration-300 hover:scale-110 hover:rotate-6 hover:shadow-xl" />
+            </div>
         </div>
     </header>
 
-    <main class="container mx-auto p-6 space-y-8">
 
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Personal Data</h2>
-            <ul class="list-disc list-inside">
-                <li><strong>Name:</strong> Subhi Suhad Ibrahim</li>
-                <li><strong>Date of Birth:</strong> 11/01/1992</li>
-                <li><strong>Marital Status:</strong> Married</li>
-                <li><strong>Nationality:</strong> Jordanian</li>
-                <li><strong>Place of residence:</strong> Amman, Jordan</li>
-                <li><strong>Phone number:</strong> +962 787155304</li>
-                <li><strong>Email:</strong> subhisuhad@gmail.com</li>
-            </ul>
-        </section>
+    <section id="about" class="bg-gradient-to-r from-blue-500 via-teal-500 to-cyan-500 py-20">
+        <div class="container px-5 md:mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-10">About Me</h2>
+            <p class="mb-5 md:text-lg">
+                I'm a software engineer with a strong focus on backend development, particularly in PHP, Laravel, and CodeIgniter. With a Bachelor's degree in Computer Science and a passion for learning new technologies, I've contributed to various e-learning platforms,
+                e-commerce applications, and custom web solutions.
+            </p>
+        </div>
+    </section>
 
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Education</h2>
-            <p><strong>BSc of Computer Science (Computer Science)</strong>, Princess Sumaya University for Technology (2010-2014)</p>
-        </section>
-
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Languages</h2>
-            <ul class="list-disc list-inside">
-                <li><strong>Arabic:</strong> Mother tongue</li>
-                <li><strong>English:</strong> Good proficiency</li>
-            </ul>
-        </section>
-
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Computer Skills</h2>
-            <ul class="list-disc list-inside">
-                <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-                <li>PHP</li>
-                <li>CSS & HTML</li>
-                <li>Laravel & CodeIgniter</li>
-                <li>JavaScript</li>
-                <li>Ajax</li>
-                <li>Problem Solving</li>
-                <li>Communication</li>
-                <li>Leadership</li>
-                <li>REST API</li>
-                <li>Moodle</li>
-                <li>Magento 2</li>
-                <li>WordPress</li>
-            </ul>
-        </section>
-
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Experience Acquired</h2>
-            <div class="space-y-4">
-                <div class="experience-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Knowledge Beam (05/2021 - Present)</h3>
-                    <p><strong>Job title:</strong> Senior PHP Developer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li>Developed custom e-Learning software plugins on the Moodle framework, incorporating AR and VR technologies for enhanced user engagement.</li>
-                        <li>Collaborated with the onsite manager to provide comprehensive status reports, ensuring transparent and efficient project management.</li>
-                        <li>Managed and resolved team conflicts effectively, fostering a collaborative and harmonious work atmosphere.</li>
-                        <li>Led daily status calls across different time zones, addressing issues, providing solutions, and implementing fixes promptly.</li>
-                        <li>Conducted internal training sessions for developers, enhancing team skills and knowledge base.</li>
-                        <li>Designed and optimized infrastructure within the technical team, improving system performance and scalability.</li>
-                    </ul>
+    <section id="experience" class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20">
+        <div class="container px-5 md:mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-10">Work Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Knowledge Beam</h3>
+                    <p>Senior PHP Developer, May 2021 - Present</p>
                 </div>
 
-                <div class="experience-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Aspire (04/2018 - 05/2021)</h3>
-                    <p><strong>Job title:</strong> Senior Software Engineer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li>Developed and maintained web applications, including the NASCO website on WordPress and Cozmo website on Magento 2.</li>
-                        <li>Created multiple custom modules and developed comprehensive APIs for mobile applications, ensuring seamless integration.</li>
-                        <li>Led development and optimization for Cozmo's Magento 2 website (www.cozmo.jo).</li>
-                    </ul>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Aspire</h3>
+                    <p>Senior Software Engineer, April 2018 - May 2021</p>
                 </div>
 
-                <div class="experience-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">NS4IT (02/2017 - 04/2018)</h3>
-                    <p><strong>Job title:</strong> Web Developer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li>Developed and maintained the ECS school system using PHP and the MQIAS system using ASP.NET, ensuring robust and efficient functionality.</li>
-                        <li>Created an AR application for Alghad newspaper using Unity, enhancing reader engagement through immersive technology.</li>
-                        <li>Collaborated with the team to synchronize tasks and ensure parallel progress on multiple projects.</li>
-                        <li>Compiled and presented weekly reports on completed tasks, providing clear updates on project status and progress.</li>
-                    </ul>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">NS4IT</h3>
+                    <p>Web Developer, February 2017 - April 2018</p>
                 </div>
 
-                <div class="experience-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Financial Engineers (05/2015 - 01/2017)</h3>
-                    <p><strong>Job title:</strong> System Engineer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li>Designed and developed a comprehensive budget system from scratch using ASP.NET, delivering a robust financial management solution.</li>
-                        <li>Developed and enhanced web applications, including the FinEngin system on ASP.NET.</li>
-                        <li>Collaborated with the team to align tasks and ensure cohesive project execution.</li>
-                        <li>Compiled and submitted detailed weekly reports to the line manager, providing updates on project progress and task completion.</li>
-                    </ul>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Financial Engineers</h3>
+                    <p>System Engineer, May 2015 - January 2017</p>
                 </div>
 
-                <div class="experience-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Miral IT (04/2014 - 05/2015)</h3>
-                    <p><strong>Job title:</strong> Web Developer, Amman, Jordan</p>
-                    <ul class="list-disc list-inside">
-                        <li>Designed and developed various web applications, focusing on optimizing user experience and functionality.</li>
-                        <li>Collaborated with team members to ensure timely project completion and quality assurance.</li>
-                        <li>Assisted in the development and maintenance of internal tools and client-facing platforms.</li>
-                    </ul>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Miral IT</h3>
+                    <p>Web Developer, April 2014 - May 2015</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="animate__animated animate__fadeIn">
-            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-            <div class="space-y-4">
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Teachers</h3>
-                    <p><strong>Description:</strong> A platform for teachers in Jordan's Ministry of Education, built in Moodle.</p>
-                    <p><strong>URL:</strong> <a href="https://teachers.gov.jo/" class="text-blue-500 underline">teachers.gov.jo</a></p>
+    <section id="projects" class="bg-gradient-to-r from-blue-500 via-teal-500 to-cyan-500 py-20">
+        <div class="container px-5 md:mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-10">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Teachers Platform</h3>
+                    <p>Developed a platform for teachers in Jordan's Ministry of Education, built on Moodle. <a href="https://teachers.gov.jo/" class="text-primary">Visit</a></p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Learners Lead</h3>
+                    <p>A platform for IBS offering courses with integration for eFawateercom and Amazon Pay, built on Moodle. <a href="https://learnerslead.ibs.edu.jo/" class="text-primary">Visit</a></p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Cluster Learning</h3>
+                    <p>A platform for BDC with courses that users can enroll in based on specific criteria, built on Moodle. <a href="https://clusterlearning.net/" class="text-primary">Visit</a></p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Glowy by Marmalade</h3>
+                    <p>An e-commerce website developed using WordPress and WooCommerce. <a href="https://glowybymarmalade.com/" class="text-primary">Visit</a></p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Army Training Platform</h3>
+                    <p>Developed a comprehensive training platform for the Jordan Army using Moodle.</p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Cozmo</h3>
+                    <p>Developed a Magento 2-based e-commerce system for Cozmo. <a href="https://cozmo.jo/" class="text-primary">Visit</a></p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Nasco Store</h3>
+                    <p>An e-commerce website developed in WordPress with WooCommerce.</p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Car Wash</h3>
+                    <p>An application for Amyal Smart Company providing various car services, built with Laravel.</p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Amyal Express</h3>
+                    <p>A logistics application developed for Amyal Smart Company, built with Laravel.</p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">FinEngin</h3>
+                    <p>A banking budgeting system developed for Financial Engineers in .NET.</p>
+                </div>
+                <!-- Project Item End -->
+
+                <!-- Project Item Start -->
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Matjarii</h3>
+                    <p>An e-commerce website developed in Magento 2.</p>
+                </div>
+                <!-- Project Item End -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20">
+        <div class="container px-5 md:mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">PHP</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Learners Lead</h3>
-                    <p><strong>Description:</strong> A platform for IBS offering courses that users can purchase, integrated with eFawateercom and Amazon Pay, with custom reports and invoicing features, built in Moodle.</p>
-                    <p><strong>URL:</strong> <a href="https://learnerslead.ibs.edu.jo/" class="text-blue-500 underline">learnerslead.ibs.edu.jo</a></p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">Laravel</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Cluster Learning</h3>
-                    <p><strong>Description:</strong> A platform for BDC with courses that users can enroll in with specific criteria, built in Moodle.</p>
-                    <p><strong>URL:</strong> <a href="https://clusterlearning.net/" class="text-blue-500 underline">clusterlearning.net</a></p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">CodeIgniter</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Glowy by Marmalade</h3>
-                    <p><strong>Description:</strong> An e-commerce website developed in WordPress with WooCommerce.</p>
-                    <p><strong>URL:</strong> <a href="https://glowybymarmalade.com/" class="text-blue-500 underline">glowybymarmalade.com</a></p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">Moodle</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Army</h3>
-                    <p><strong>Description:</strong> A training platform for the Jordan Army, built in Moodle.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">Magento 2</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Cozmo</h3>
-                    <p><strong>Description:</strong> An e-commerce system developed in Magento 2.</p>
-                    <p><strong>URL:</strong> <a href="https://cozmo.jo/" class="text-blue-500 underline">cozmo.jo</a></p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">WordPress</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Nasco Store</h3>
-                    <p><strong>Description:</strong> An e-commerce website developed in WordPress with WooCommerce.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">REST API</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Matjarii</h3>
-                    <p><strong>Description:</strong> An e-commerce website developed in Magento 2.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">HTML</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Car Wash</h3>
-                    <p><strong>Description:</strong> An application for Amyal Smart Company, developed in Laravel.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">CSS</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">Amyal Express</h3>
-                    <p><strong>Description:</strong> An application for Amyal Smart Company, developed in Laravel.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">JavaScript</h3>
                 </div>
 
-                <div class="project-item animate__animated animate__fadeInUp">
-                    <h3 class="text-xl font-semibold">FinEngin</h3>
-                    <p><strong>Description:</strong> A banking budgeting system developed for Financial Engineers in .NET.</p>
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">Linux</h3>
+                </div>
+
+                <div class="p-5 bg-gray-800 rounded transition hover:bg-gray-700 transform hover:scale-105 hover:shadow-lg">
+                    <h3 class="text-xl font-bold">Leadership</h3>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <footer id="contact" class="bg-gradient-to-r from-blue-500 via-teal-500 to-cyan-500 py-20">
+        <div class="container px-5 md:mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-10">Contact Me</h2>
+            <p class="mb-5">Feel free to reach out to me through any of the platforms below.</p>
 
+            <div class="flex justify-center gap-5">
+                <a href="mailto:subhisuhad@gmail.com" class="text-white hover:text-primary">
+                    <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/subhi-suhad-4621aa97/" target="_blank" class="text-white hover:text-primary">
+                    <ion-icon name="logo-linkedin" class="text-3xl"></ion-icon>
+                </a>
+                <a href="https://github.com/subhisuhad" target="_blank" class="text-white hover:text-primary">
+                    <ion-icon name="logo-github" class="text-3xl"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

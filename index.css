@@ -1,0 +1,109 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    /* Custom styles can go here */
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        letter-spacing: 0.05rem;
+    }
+    
+    a {
+        transition: color 0.3s ease-in-out;
+    }
+    
+    a:hover {
+        color: #FF5733;
+        /* Match this with your primary color */
+    }
+    
+    header {
+        background-color: #333333;
+        /* Match this with your secondary color */
+    }
+    
+    footer {
+        background-color: #333333;
+        /* Match this with your secondary color */
+    }
+    /* Keyframes for animations */
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /* Applying animations */
+    
+    #home h1 {
+        animation: fadeInUp 1s ease-in-out;
+    }
+    
+    #home h3,
+    #home p {
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+    
+    #home a {
+        animation: fadeInUp 2s ease-in-out;
+    }
+    
+    #about,
+    #projects,
+    #experience,
+    #skills,
+    #contact {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    header nav ul {
+        animation: fadeInUp 0.5s ease-in-out;
+    }
+    
+    header nav label {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    /* Parallax effect */
+    
+    .parallax {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        transform: translateZ(0);
+    }
+    /* Transition effects */
+    
+    .transition {
+        transition: all 0.3s ease;
+    }
+    
+    .hover\:scale-105:hover {
+        transform: scale(1.05);
+    }
+    
+    .hover\:shadow-lg:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
